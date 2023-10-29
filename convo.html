@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Riddles</title>
+        <link href="/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="chat">
+            <div class="conversations">
+                <input id="userInput" placeholder="Type your response here!"/>
+                <div id="conversations"></div>
+            </div>
+            <div class="characterView">
+                <img id="characterImage" src="/images/skeleton-evil.png">
+            </div>
+            <a href="/lock.html" style="color: white; align-self: end;">
+                <h3 class="hidden bg-black" id="continue">Click here to continue on to the next room...</h3>
+            </a>
+            <script src="./script.js"></script>
+            <sound src="/audio/rattling-bones.mp3" class="hidden" id="sound"></sound>
+        </div>
+        <p>Hi! If the chatbot isn't working, you'll need a token for this to work. Go ahead and reload the page to reset the site, then: you can get a token in the #open-ai-token channel in Slack by running the /openai-create-token command. Go ahead and paste it in the box below. Otherwise, you can skip to the next screen by clicking <a href="/lock.html">here.</a></p>
+        <input id="token" placeholder="Hack Club Open AI token"/>
+    </body>
+</html>

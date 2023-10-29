@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bedroom</title>
+        <link href="/style.css" rel="stylesheet">
+    </head>
+    <body class="bg-black">
+        <img class="bg-img" src="/images/index.jpg" id="skeleton_background" alt="A bedroom in a haunted house">
+        <a href="/convo.html"><img src="/images/window-skeleton-2.png" id="window-skeleton-2" alt="A skeleton waving in the window"></a>
+        <img id="skeleton-hint" class="hidden" src="/images/text.png">
+        <script>
+            let element = document.getElementById("window-skeleton-2")
+            setTimeout(function () {
+                element.src="/images/window-skeleton.png"
+                element.id="window-skeleton"
+            }, 5000);
+            let speech = document.getElementById("skeleton-hint")
+            setTimeout(function () {
+                speech.classList.remove("hidden")
+            }, 10000);
+
+        </script>
+    </body>
+</html>

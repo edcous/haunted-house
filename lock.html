@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet">
+    </head>
+    <body class="bg-black">
+        <img class="bg-img" id="lock" src="/images/lock-room.png" alt="lock">
+        <img id="skeleton" src="/images/skeleton.jpg" alt="skeleton">
+        <img id="quote" src="/images/text-2.png" alt="Thought you could get out?">
+        <img id="postit" src="/images/postit.png" alt="Hmm?">
+        <script>
+            let quote = document.getElementById("quote")
+            setTimeout(function () {
+                quote.src = "/images/text-3.png"
+                quote.alt = "Ya still need to unlock the door!"
+            }, 7000);
+        </script>
+    </body>
+</html>

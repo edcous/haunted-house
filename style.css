@@ -1,0 +1,88 @@
+
+.bg-img{
+    height: 95vh;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#talking-skeleton{
+    height: 100vh;
+}
+
+#window-skeleton{
+    position: absolute;
+    height: 15vh;
+    top: 42vh;
+    left: 46vw;  
+}
+#window-skeleton-2{
+    position: absolute;
+    height: 7.5vh;
+    top: 48vh;
+    left: 46vw;  
+}
+.hidden{
+    display: none;
+}
+#skeleton-hint{
+    position: absolute;
+    height: 15vh;
+    top: 36vh;
+    left: 50.5vw;
+}
+#skeleton{
+    position: absolute;
+    height: 45vh;
+    top: 45vh;
+    left: -3vw;
+}
+.quote{
+    position: absolute;
+    height: 30vh;
+    top: 25vh;
+    left: 16vw;
+}
+.bg-black{
+    background-color: black;
+}
+body{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.chat {
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-auto-flow: column;
+    height: 80vh;
+    grid-template-columns: 3fr 2fr;
+    gap: 16px;
+    font-family: 'Source Code Pro';
+}
+
+.button{
+    background-color: black;
+}
+
+.conversations {
+    background-color: #673601;
+    color: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.characterView {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.user {
+    text-align: left;
+}
+
+.assistant {
+    text-align: right;
+}
