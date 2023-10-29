@@ -85,6 +85,7 @@ function addAssistantResponse(assistantResponse) {
     //setExpression(formattedResponse.expression)
     addConversation(assistantResponse, "assistant")
     enableInput()
+    document.getElementById("token-stuff").classList.add("hidden")
 }
 
 function redirectUser() {

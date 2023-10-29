@@ -38,7 +38,13 @@
     top: 45vh;
     left: -3vw;
 }
-.quote{
+#postit{
+    position: absolute;
+    height: 4vh;
+    top: 60vh;
+    left: 65vw;
+}
+#quote{
     position: absolute;
     height: 30vh;
     top: 25vh;
@@ -51,8 +57,8 @@ body{
     margin-top: 0px;
     margin-left: 0px;
     margin-bottom: 0px;
+    font-family: 'Source Code Pro';
 }
-
 .chat {
     background-color: rgb(0, 0, 0);
     display: grid;
@@ -60,7 +66,6 @@ body{
     height: 80vh;
     grid-template-columns: 3fr 2fr;
     gap: 16px;
-    font-family: 'Source Code Pro';
 }
 
 .button{
@@ -74,6 +79,17 @@ body{
     flex-direction: column-reverse;
 }
 
+.door{
+    height: 95vh;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+}
+
 .characterView {
     display: flex;
     flex-direction: column-reverse;
@@ -85,4 +101,31 @@ body{
 
 .assistant {
     text-align: right;
+}
+
+.unhide{
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 60vh;
+    left: 65vw;
+}
+.modalimg{
+    height: 20vh;
+}
+#lock-click{
+    position: absolute;
+    top: 45vh;
+    left: 45vw;
+    height: 10vh;
+    width: 10vw;
+}
+.door-modal{
+    position: absolute;
+    background-color: white;
+    left: 35vw;
+    top: 30vh;
+}
+#complete{
+    color: green;
 }

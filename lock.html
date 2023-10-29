@@ -1,18 +1,70 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <link href="/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
     </head>
     <body class="bg-black">
         <img class="bg-img" id="lock" src="/images/lock-room.png" alt="lock">
         <img id="skeleton" src="/images/skeleton.jpg" alt="skeleton">
+        <sound src="/audio/jump-scare.mp3" class="hidden" id="jump-scare"></sound>
         <img id="quote" src="/images/text-2.png" alt="Thought you could get out?">
-        <img id="postit" src="/images/postit.png" alt="Hmm?">
+        <a href="#" onclick="showHint()"><img id="postit" src="/images/postit.png" alt="Hmm?"></a>
+        <div class="hidden modal" id="modal1">
+            <img src="/images/postit-big.png" class="modalimg" alt="2 black skulls, 3 white skulls, 4 red skulls, and 3 green skulls">
+        </div>
+        <a id="lock-click" href="#" onclick="showModal()"></a>
         <script>
             let quote = document.getElementById("quote")
             setTimeout(function () {
                 quote.src = "/images/text-3.png"
                 quote.alt = "Ya still need to unlock the door!"
             }, 7000);
+            function showHint(){
+                let hintModal = document.getElementById("modal1")
+                hintModal.classList.remove("hidden")
+                hintModal.classList.add("unhide")
+                setTimeout(function () {
+                    hintModal.classList.add("hidden")
+                    hintModal.classList.remove("unhide")
+                }, 3000);
+            }
+            function showModal(){
+                let doorModal = document.getElementById("door")
+                doorModal.classList.remove("hidden")
+                doorModal.classList.add("door-modal")
+                let lockClicker = document.getElementById("lock-click")
+                lockClicker.classList.add("hidden")
+            }
+            function hideModal(){
+                let doorModal = document.getElementById("door")
+                doorModal.classList.add("hidden")
+                doorModal.classList.remove("door")
+                let lockClicker = document.getElementById("lock-click")
+                lockClicker.classList.remove("hidden")
+            }
         </script>
+        <div class="hidden" id="door">
+            <p>Hint: Black - White - Red - Green ----- <a href="#" onclick="hideModal()">Close</a></p>
+            <p>Enter the code to escape and move on to the next room.</p>
+            <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,''); isCorrectInput()" id="1"/> - <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,''); isCorrectInput()" id="2"/> - <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,''); isCorrectInput()"id="3"/> - <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,''); isCorrectInput()" id="4"/>
+            <p id="complete" class="hidden">It's time to move on to the next group - click <a href="">here</a> to continue playing.</p>
+        </div>
+            <script>
+                function isCorrectInput(){
+                    let input1 = document.getElementById("1").value;
+                    let input2 = document.getElementById("2").value;
+                    let input3 = document.getElementById("3").value;
+                    let input4 = document.getElementById("4").value;
+
+                    if (input1 == "2" && input2 == "3" && input3 == "4" && input4 == "3") {
+                        let sound = new Audio('/audio/jump-scare.mp3');
+                        sound.play()
+                        document.getElementById("complete").classList.remove("hidden")
+                    }
+                }
+            </script>
     </body>
 </html>
