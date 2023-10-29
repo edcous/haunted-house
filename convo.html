@@ -16,12 +16,12 @@
             <div class="characterView">
                 <img id="characterImage" src="/images/skeleton-evil.png">
             </div>
-            <a href="/lock.html" style="color: white; align-self: end;">
-                <h3 class="hidden bg-black" id="continue">Click here to continue on to the next room...</h3>
-            </a>
             <script src="./script.js"></script>
             <sound src="/audio/rattling-bones.mp3" class="hidden" id="sound"></sound>
         </div>
+        <a href="/lock.html" style="color: white; text-align: center; align-self: flex-end; position: absolute; z-index: 1000; top: 90vh;">
+            <h3 class="hidden bg-black" id="continue">Click here to continue on to the next room...</h3>
+        </a>
         <div id="token-stuff">
             <p>Hi! If the chatbot isn't working, you'll need a token for this to work. Go ahead and reload the page to reset the site, then: you can get a token in the #open-ai-token channel in Slack by running the /openai-create-token command. Go ahead and paste it in the box below. Otherwise, you can skip to the next screen by clicking <a href="/lock.html">here.</a> Also- the original code and inspiration for the ChatGPT conversation is from Thomas.</p>
             <input id="token" placeholder="Hack Club Open AI token"/>

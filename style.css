@@ -129,3 +129,7 @@ body{
 #complete{
     color: green;
 }
+input{
+    border-color: blue;
+    border-radius: .5vh;
+}
